@@ -14,4 +14,4 @@ print(is_female)
 print(type(is_female))
 
 fahrenheit = celcius * 9 / 5 + 32
-print(f"Fahrenheit: {fahrenheit}")
+print(f"\nFahrenheit: {fahrenheit}")
