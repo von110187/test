@@ -1,7 +1,7 @@
 while True:
     try:
-        weight = float(input(f"Weight(kg): "))
-        height = float(input(f"Height(m): "))
+        weight = float(input("Weight(kg): "))
+        height = float(input("Height(m): "))
         break
     except ValueError:
         print("Please enter a number")
