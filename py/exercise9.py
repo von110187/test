@@ -22,7 +22,9 @@ student_records["students"]["student_003"] = {
     "grades": [82, 79, 91]
 }
 
-student_records["students"]["student_001"]["age"] = 20
+for student_id, student in student_records["students"].items():
+    if student["name"] == "John":
+        student["age"] = 20
 
 for student_id, student in student_records["students"].items():
     print(f"Student ID: {student_id}, Name: {student['name']}, "

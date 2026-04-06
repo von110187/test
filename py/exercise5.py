@@ -9,12 +9,23 @@ def is_prime(n):
     return True
 
 while True:
-        try:
-            input = int(input("Find primes for: "))
-            break
-        except ValueError:
-            print("Please enter a valid integer")
+    try:
+        user_input = int(input("Find primes within: "))
+        break
+    except ValueError:
+        print("Please enter a valid integer")
 
-for num in range(2, input + 1):
+result = []
+count = 0
+
+for num in range(2, user_input + 1):
+    if count >= 20:
+        break
     if is_prime(num):
-        print(num)
+        result.append(num)
+        count += 1
+
+if len(result) > 0:
+    print(f"Result: {result}")
+else:
+    print(f"No Prime number in {user_input}")
