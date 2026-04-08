@@ -145,7 +145,7 @@ def main():
             try:
                 user_id = int(input("Enter user ID: ").strip())
                 posts = db.get_all_posts(user_id)
-                if user_id:
+                if posts:
                     for post in posts:
                         print(f"\nPost ID: {post[0]}")
                         print(f"Title: {post[1]}")
@@ -153,7 +153,7 @@ def main():
                         print(f"Created: {post[3]}")
                         print("-" * 30)
                 else :
-                    print("No posts found for this user")
+                    print("No posts found for this user.")
             except ValueError:
                 print("Invalid user ID, Please enter a number.")
         
