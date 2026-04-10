@@ -132,8 +132,7 @@ def display_menu():
     print("3. Create Post")
     print("4. View User Posts")
     print("5. Delete User")
-    print("6. Delete Post")
-    print("7. Exist")
+    print("6. Exist")
     print("-" * 40)
 
 def main():
@@ -211,18 +210,6 @@ def main():
                 print("Deletion cancelled.")
 
         elif choice == '6':
-            print("\n--- Delete Post ---")
-            post_id = input("Enter post ID to delete: ").strip()
-            confirm = input(f"Are you sure you want to delete post {post_id}? (y/n): ").strip().lower()
-            if confirm == 'y':
-                if db.delete_post(post_id):
-                    print("Post deleted successfully!")
-                else:
-                    print("Post not found or deletion failed.")
-            else:
-                print("Deletion cancelled.")
-
-        elif choice == '7':
             print("\nClosing database connection...")
             db.close_connection()
             print("\nGoodbye! 👋")
